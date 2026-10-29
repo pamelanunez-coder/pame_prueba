@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Iniciar Sesion</title>
+    </head>
+    <body>
+        <form action="index.php" method="POST">
+            usuario:<input type="text" name="usuario" placeholder="usuario" value="<?php echo htmlspecialchars($usuario ?? ''); ?>"/>
+            password: <input type="password" name="password" placeholder="password"/> 
+            
+            ¿cuanto es <?php echo $_SESSION['n1'] . "+" . $_SESSION['n2'];?>?=
+            <input type="number" name="captcha" required>
+            <input type="submit" value="ingresar">
+
+        </form>
+        
+    </body>
+</html>

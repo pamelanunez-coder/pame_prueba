@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Buscador de usuarios</title>
+    </head>
+    <body>
+        <form action="buscador.php" method="GET">
+            Nombre: <input type="text" name="nombre" placeholder="nombre"/>
+            Apellido: <input type="text" name="apellido" placeholder="apellido"/>
+            Ciudad: <input type="text" name="ciudad" placeholder="ciudad"/>
+            Categoria: <select id="grupo_alfa" name="grupo_alfa" placeholder = "grupo_alfa">
+                <option value="Grupo A">Grupo A</option>
+                <option value="Grupo B">Grupo B</option>
+                <option value="Grupo C">Grupo C</option>
+            </select>
+            <input type="submit" value="Buscar">
+            <br>
+
+        </form>
+
+        <h3>Registro de participantes</h3>
+        <p><strong>Nombre del Participante</strong><?php echo htmlspecialchars($nombre); ?></p>
+        <p><strong>Apellido del Participante</strong><?php echo htmlspecialchars($apellido); ?></p>
+        <p><strong>Ciudad del participante</strong><?php echo htmlspecialchars($ciudad); ?></p>
+        <p><strong>Categoria</strong><?php echo htmlspecialchars($grupo_alfa); ?></p>
+  
+        <a href="panel.php">Volver al panel</a>
+    </body>
+</html>

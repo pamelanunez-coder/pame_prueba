@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <title>Reserva Rifa</title>
+    </head>
+    <body>
+        <h1>Reserva numeros para la rifa</h1>
+        <form method="POST" action="rifa.php">
+            <label for="n_rifa"><strong>cantidad de numeros reservados:</strong></label>
+            <input 
+                type="number" 
+                name="n_rifa" 
+                id="n_rifa" 
+                min="0" 
+                value="<?php echo htmlspecialchars($n_rifa); ?>" 
+                required
+            />
+            <input type="submit" value="guardar"/>
+        </form>
+        <p><strong>Total a pagar:</strong> $<?php echo isset($total) ? number_format($total, 0, ',', '.') : 0; ?></p>
+        
+        <a href="panel.php">Volver al panel</a>
+    </body>
+</html>
+
